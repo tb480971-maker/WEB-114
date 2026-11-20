@@ -27,22 +27,16 @@ const moods = {
         name: "Sleepy",
         bg: '#a0d1e8',
         text: '#6a4c3e',
-        message: 'Go take a nap!'},
-//Add a random mood button 
-    randommood: {
-        name: "Random Mood",
-        bg: '#e17fd9',
-        text: '#4d1903',
-        message: 'Have fun!'},           
+        message: 'Go take a nap!'},      
 };
 
 //Create a function to change the page information
 function handleMoodButtonClick(moodClick) {
 
-    //Check to see if the mood button was clicked
+   //Check to see if the mood button was clicked
     if (moodClick.target.classList.contains('mood-btn')) {
    //Create a variable named mood to get the selected mood button
-    const mood = moodClick.target.getAttribute('data-mood');
+    let mood = moodClick.target.getAttribute('data-mood');
   // Create a variable named moodSettings to find user's mood matching information
     const moodSettings = moods[mood];
   //Update the page by changing background color
@@ -52,7 +46,13 @@ function handleMoodButtonClick(moodClick) {
   //Change the message
     quote.textContent = moodSettings.message;
   //Change the title of the page to the Mood Name 
-    title.textContent = moodSettings.name
+    title.textContent = moodSettings.name 
+  //Add a random mood button 
+    if (mood === 'randommood') {
+    const moodKeys = Objects.keys(moods); //['happy', 'calm', 'angry', 'sleepy']
+    const randomIndex = Math.floor(Math.random() * moodKeys.length);
+    mood = moodKeys[randomIndex];
+    }
 
  //Testing if the page changes accordingly to the clicked mood button
    console.log("Mood selected:", mood);
