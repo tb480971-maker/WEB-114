@@ -57,7 +57,6 @@ function handleMoodButtonClick(moodClick) {
  //Testing if the page changes accordingly to the clicked mood button
    console.log("Mood selected:", mood);
    console.log("Mood settings:", mood);
-   console.log("randommood;", mood);
     }
   }
 
