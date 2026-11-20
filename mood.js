@@ -49,9 +49,9 @@ function handleMoodButtonClick(moodClick) {
     title.textContent = moodSettings.name 
   //Add a random mood button 
     if (mood === 'randommood') {
-    const moodKeys = Objects.keys(moods); //['happy', 'calm', 'angry', 'sleepy']
+    const moodKeys = Object.keys(moods); //['happy', 'calm', 'angry', 'sleepy']
     const randomIndex = Math.floor(Math.random() * moodKeys.length);
-    mood = moodKeys[randomIndex];
+    mood = moodKeys[randomIndex];}
     }
 
  //Testing if the page changes accordingly to the clicked mood button
