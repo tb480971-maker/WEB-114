@@ -52,13 +52,11 @@ function handleMoodButtonClick(moodClick) {
     const moodKeys = Object.keys(moods); //['happy', 'calm', 'angry', 'sleepy']
     const randomIndex = Math.floor(Math.random() * moodKeys.length);
     mood = moodKeys[randomIndex];}
-    }
 
  //Testing if the page changes accordingly to the clicked mood button
    console.log("Mood selected:", mood);
    console.log("Mood settings:", mood);
    console.log("randommood;", mood);
-  
     }
   }
 
