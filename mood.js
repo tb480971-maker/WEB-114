@@ -60,6 +60,6 @@ function handleMoodButtonClick(moodClick) {
     }
   }
 
-//Add one event listener for all 4 buttons
+//Add one event listener for all 5 buttons
 buttons.addEventListener('click', handleMoodButtonClick);
 
